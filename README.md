@@ -2,6 +2,11 @@
 
 Passport.js strategy for client certificate (mTLS) authentication, powered by [client-certificate-auth](https://github.com/tgies/client-certificate-auth).
 
+[![CI](https://github.com/tgies/passport-client-certificate-auth/actions/workflows/ci.yml/badge.svg)](https://github.com/tgies/passport-client-certificate-auth/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/passport-client-certificate-auth.svg)](https://www.npmjs.com/package/passport-client-certificate-auth)
+[![codecov](https://codecov.io/gh/tgies/passport-client-certificate-auth/graph/badge.svg)](https://codecov.io/gh/tgies/passport-client-certificate-auth)
+[![stryker mutation testing](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Ftgies%2Fpassport-client-certificate-auth%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/tgies/passport-client-certificate-auth/master)
+
 Supports both direct TLS socket certificates and reverse proxy header-based certificate extraction (AWS ALB, Cloudflare, Envoy, Traefik, and custom configurations).
 
 ## Why this package?
