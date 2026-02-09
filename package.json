@@ -1,0 +1,88 @@
+{
+  "name": "passport-client-certificate-auth",
+  "version": "1.0.0",
+  "description": "Passport.js strategy for client certificate (mTLS) authentication, powered by client-certificate-auth",
+  "homepage": "https://github.com/tgies/passport-client-certificate-auth",
+  "bugs": {
+    "url": "https://github.com/tgies/passport-client-certificate-auth/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/tgies"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "engines": {
+    "node": ">= 20"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:mutation": "stryker run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run test:coverage",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "passport",
+    "passport-strategy",
+    "pki",
+    "ssl",
+    "tls",
+    "mtls",
+    "certificate",
+    "client-cert",
+    "authentication",
+    "mTLS",
+    "mutual-tls",
+    "zero-trust",
+    "x509"
+  ],
+  "author": "Tony Gies <tony.gies@gruppe86.net> (https://github.com/tgies)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgies/passport-client-certificate-auth.git"
+  },
+  "directories": {
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/**/*.js"
+  ],
+  "dependencies": {
+    "client-certificate-auth": "^1.1.0",
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
+    "@stryker-mutator/core": "^9.5.1",
+    "@stryker-mutator/jest-runner": "^9.5.1",
+    "@eslint/js": "^9.0.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.2",
+    "eslint": "^9.0.0",
+    "globals": "^17.3.0",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
+    "passport": "^0.7.0",
+    "selfsigned": "^5.5.0",
+    "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  }
+}

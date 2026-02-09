@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Coverage reports
+coverage/
+
+# OS files
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# stryker temp files
+.stryker-tmp
+reports/
