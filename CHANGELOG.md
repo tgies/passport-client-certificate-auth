@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-09
+
+### Changed
+
+- Certificate extraction logic now uses client-certificate-auth/extractor module, eliminating code duplication while maintaining identical behavior and 100% test coverage. No API changes.
+- Updated client-certificate-auth dependency from ^1.1.0 to ^1.2.0
+
 ## [1.0.0] - 2026-02-09
 
 ### Added
