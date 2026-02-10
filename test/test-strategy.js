@@ -763,6 +763,25 @@ describe('Strategy', () => {
             });
         });
 
+        it('should not call onRejected on success', (done) => {
+            const onRejected = jest.fn();
+            const strategy = new Strategy({
+                onAuthenticated: jest.fn(),
+                onRejected,
+            }, (cert, doneCb) => doneCb(null, { name: 'admin' }));
+
+            strategy.success = jest.fn();
+            strategy.fail = jest.fn();
+
+            const req = dummyReq(true, mockCert);
+            strategy.authenticate(req);
+
+            setImmediate(() => {
+                expect(onRejected).not.toHaveBeenCalled();
+                done();
+            });
+        });
+
         it('should call onRejected when verify returns false', (done) => {
             let hookArgs = null;
             const strategy = new Strategy({
