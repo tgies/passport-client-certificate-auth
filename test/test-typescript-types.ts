@@ -17,7 +17,7 @@ import type {
 
 // Test 1: Basic constructor with verify function only
 const _basic = new Strategy((cert, done) => {
-    const _cn: string | undefined = cert.subject?.CN;
+    const _cn: string | string[] | undefined = cert.subject?.CN;
     done(null, { name: _cn });
 });
 
@@ -90,7 +90,7 @@ const _encoding: HeaderEncoding = 'base64-der';
 // Test 10: ClientCertRequest has clientCertificate
 function checkRequest(req: ClientCertRequest): void {
     if (req.clientCertificate) {
-        const _cn: string | undefined = req.clientCertificate.subject?.CN;
+        const _cn: string | string[] | undefined = req.clientCertificate.subject?.CN;
         void _cn;
     }
 }
