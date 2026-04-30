@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2026-04-30
+
+### Changed
+
+- Updated `client-certificate-auth` dependency floor from `^1.3.1` to `^1.3.4`. Brings in the v1.3.2 vacuous-truth fix for `allowIssuer({})` / `allowSubject({})`, the v1.3.3 AWS ALB chain handling fix, and the v1.3.4 Envoy XFCC chain fix plus `allOf()` zero-callback fail-closed fix.
+
+## [1.1.2] - 2026-03-17
+
+### Fixed
+
+- Resolved npm audit vulnerabilities in dev dependencies.
+
+## [1.1.1] - 2026-03-17
+
+### Changed
+
+- Updated `client-certificate-auth` dependency from `^1.2.0` to `^1.3.1`. Brings in CJS subpath exports for `/extractor` and multi-valued DN field handling.
+
+### Tests
+
+- Killed a surviving Stryker mutant in the `if (!result.success)` branch guard.
+
 ## [1.1.0] - 2026-02-09
 
 ### Changed
