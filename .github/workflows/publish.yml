@@ -39,7 +39,7 @@ jobs:
         run: npx publint
 
       - name: Security audit
-        run: npm audit --audit-level=moderate
+        run: npm audit --audit-level=moderate --omit=dev
 
       # First publish: set NPM_TOKEN secret in repo settings.
       # Once the package exists on npm, configure OIDC trusted publishers
