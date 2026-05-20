@@ -66,6 +66,7 @@
     "passport-strategy": "^1.0.0"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
     "@stryker-mutator/core": "^9.5.1",
@@ -81,6 +82,9 @@
     "passport": "^0.7.0",
     "selfsigned": "^5.5.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "fflate": "0.8.2"
   },
   "lint-staged": {
     "*.js": "eslint --fix"
