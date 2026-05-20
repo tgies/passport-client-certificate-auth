@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-05-19
+
+### Changed
+
+- Widened `client-certificate-auth` dependency range to `^1.3.5 || ^2.0.1`. The adapter consumes only the `/extractor` subpath, which is unaffected by the v2.0.0 strict-true callback breaking change (that applies to the main middleware, not the extractor). The v2.0.1 `validateExtractorOptions()` change is observable for downstream users who pass invalid `certificateSource`/`headerEncoding`: typos that previously fell through to a 401 now throw at construction.
+
 ## [1.1.3] - 2026-04-30
 
 ### Changed
