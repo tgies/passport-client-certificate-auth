@@ -81,7 +81,7 @@
     "lint-staged": "^16.2.7",
     "passport": "^0.7.0",
     "selfsigned": "^5.5.0",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "overrides": {
     "fflate": "0.8.2"
