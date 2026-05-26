@@ -67,8 +67,8 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
     "@stryker-mutator/core": "^9.5.1",
     "@stryker-mutator/jest-runner": "^9.5.1",
     "@eslint/js": "^9.0.0",
@@ -78,7 +78,7 @@
     "globals": "^17.3.0",
     "husky": "^9.1.7",
     "jest": "^30.2.0",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^17.0.4",
     "passport": "^0.7.0",
     "selfsigned": "^5.5.0",
     "typescript": "^6.0.3"
