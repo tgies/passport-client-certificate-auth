@@ -615,6 +615,51 @@ describe('Strategy', () => {
             expect(capturedCert.issuerCertificate).toBeTruthy();
         });
 
+        it('should link chain from chainHeader when includeChain is true', () => {
+            let capturedCert;
+            setup((cert, done) => {
+                capturedCert = cert;
+                done(null, {});
+            }, {
+                certificateHeader: 'x-client-cert',
+                chainHeader: 'x-client-cert-chain',
+                headerEncoding: 'base64-der',
+                includeChain: true,
+            });
+
+            const req = headerReq({
+                'x-client-cert': base64Der,
+                'x-client-cert-chain': base64Der,
+            });
+
+            strategy.authenticate(req);
+
+            expect(successSpy).toHaveBeenCalled();
+            expect(capturedCert.issuerCertificate).toBeTruthy();
+        });
+
+        it('should ignore chainHeader contents when includeChain is false', () => {
+            let capturedCert;
+            setup((cert, done) => {
+                capturedCert = cert;
+                done(null, {});
+            }, {
+                certificateHeader: 'x-client-cert',
+                chainHeader: 'x-client-cert-chain',
+                headerEncoding: 'base64-der',
+            });
+
+            const req = headerReq({
+                'x-client-cert': base64Der,
+                'x-client-cert-chain': base64Der,
+            });
+
+            strategy.authenticate(req);
+
+            expect(successSpy).toHaveBeenCalled();
+            expect(capturedCert.issuerCertificate).toBeUndefined();
+        });
+
         it('should fallback to socket when header extraction fails and fallbackToSocket is true', () => {
             setup((cert, done) => done(null, { name: 'admin' }), {
                 certificateSource: 'aws-alb',
