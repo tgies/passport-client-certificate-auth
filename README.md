@@ -245,6 +245,7 @@ passport.use(new ClientCertStrategy({
 | `passReqToCallback` | `boolean` | `false` | Pass `req` as first arg to verify callback |
 | `certificateSource` | `string` | — | Preset: `'aws-alb'`, `'cloudflare'`, `'envoy'`, `'traefik'` |
 | `certificateHeader` | `string` | — | Custom header name for certificate |
+| `chainHeader` | `string` | — | Optional second header carrying the certificate chain (overrides preset default) |
 | `headerEncoding` | `string` | — | `'url-pem'`, `'url-pem-aws'`, `'xfcc'`, `'base64-der'`, `'rfc9440'` |
 | `fallbackToSocket` | `boolean` | `false` | Fall back to socket if header extraction fails |
 | `includeChain` | `boolean` | `false` | Include full certificate chain |
