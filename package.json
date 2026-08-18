@@ -1,6 +1,6 @@
 {
   "name": "passport-client-certificate-auth",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Passport.js strategy for client certificate (mTLS) authentication, powered by client-certificate-auth",
   "homepage": "https://github.com/tgies/passport-client-certificate-auth",
   "bugs": {

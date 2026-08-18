@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-08-18
+
+### Added
+
+- `chainHeader` option, forwarded to the core extractor. For RFC 9440-style schemes that split the leaf certificate and its chain across two headers. Requires `client-certificate-auth` 2.1.0 or newer; older in-range core versions ignore the option.
+
+### Fixed
+
+- Unrecognized extraction reasons now fail with 401. The rejection switch had no `default`, so a reason code added by a newer in-range core release fell through and invoked the verify callback with a null certificate.
+
+### Changed
+
+- Dev-dependency advisories cleared: js-yaml, brace-expansion, and fast-uri updated via `npm audit fix`, plus a `qs` override for the copy Stryker pulls through typed-rest-client.
+
 ## [1.2.0] - 2026-05-19
 
 ### Changed
