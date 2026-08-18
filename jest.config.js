@@ -6,6 +6,7 @@ export default {
     ],
     testMatch: [
         '**/test/test-strategy.js',
+        '**/test/test-strategy-unknown-reason.js',
         '**/test/test-integration-*.js',
         '**/test/test-e2e-*.js',
     ],
