@@ -86,7 +86,8 @@
     "typescript": "^7.0.2"
   },
   "overrides": {
-    "fflate": "0.8.2"
+    "fflate": "0.8.2",
+    "qs": "^6.15.2"
   },
   "lint-staged": {
     "*.js": "eslint --fix"
